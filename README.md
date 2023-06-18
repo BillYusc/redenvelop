@@ -46,8 +46,6 @@
 
       使用Redis，Zset实现。Value值为红包id，Score值为红包发送时间戳，使用SpringBoot提供的Schedule方式来轮询Score值超过过期时间的Value，将过期红包退回。
 
-
-
 ## 后续拓展
 
 - [ ] 使用Nginx做请求的负载
@@ -63,10 +61,6 @@
 - [ ] 红包id目前是借助于MySQL自增主键，在集群环境下会有性能瓶颈，使用SnowFlake
 
 - [ ] Redis使用Codis或者一致性Hash的方式进行扩容
-
-
-
-
 
 ## 附录：本地docker环境搭建
 
@@ -93,7 +87,7 @@ services:
   # kafka
   kafka:
     image: wurstmeister/kafka
-    command: [start-kafka.sh]
+    command: [ start-kafka.sh ]
     ports:
       - 9092:9092
     environment:

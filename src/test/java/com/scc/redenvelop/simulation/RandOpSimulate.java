@@ -95,6 +95,14 @@ public class RandOpSimulate {
         log.info("用户{},抢包结果：{}", grabUser, response.getMessage());
     }
 
+    public static void main(String[] args) {
+        ExecutorService pool = Executors.newFixedThreadPool(totalUser);
+        for (int i = 1; i <= totalUser; i++) {
+            Thread thread = new Person(i);
+            pool.submit(thread);
+        }
+    }
+
     /**
      * 模拟一个人的线程
      * 10%概率发红包
@@ -119,14 +127,6 @@ public class RandOpSimulate {
                 }
                 sleep(1000);
             }
-        }
-    }
-
-    public static void main(String[] args) {
-        ExecutorService pool = Executors.newFixedThreadPool(totalUser);
-        for (int i = 1; i <= totalUser; i++) {
-            Thread thread = new Person(i);
-            pool.submit(thread);
         }
     }
 }

@@ -1,6 +1,5 @@
 package com.scc.redenvelop.service.impl;
 
-import com.scc.redenvelop.dao.IGrabRedenvRecordDao;
 import com.scc.redenvelop.dao.IOriginRedenvRecordDao;
 import com.scc.redenvelop.dao.IUserAccountDao;
 import com.scc.redenvelop.dto.GrabRedenvRecordDto;

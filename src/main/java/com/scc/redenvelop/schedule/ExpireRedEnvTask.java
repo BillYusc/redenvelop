@@ -42,7 +42,7 @@ public class ExpireRedEnvTask {
                 Integer redPackId = (Integer) o;
                 Integer userId = accountDao.getUserIdByRed(redPackId);
                 Integer leftMoney = getRedEnvelopeLeft(redPackId);
-                if(leftMoney >0){
+                if (leftMoney > 0) {
                     PartRedEnvDto dto = new PartRedEnvDto();
                     dto.setUserId(userId);
                     dto.setRedEnvelopeId(redPackId);
