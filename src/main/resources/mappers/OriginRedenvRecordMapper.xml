@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.scc.redenvelop.dao.IOriginRedenvRecordDao">
+    <resultMap id="BaseResultMap" type="com.scc.redenvelop.entity.OriginRedenvRecord">
+        <id column="id" jdbcType="INTEGER" property="packageId"/>
+        <result column="user_id" jdbcType="INTEGER" property="userId"/>
+        <result column="sum" jdbcType="INTEGER" property="sum"/>
+        <result column="divisor" jdbcType="INTEGER" property="divisor"/>
+        <result column="create_time" jdbcType="TIMESTAMP" property="createTime"/>
+    </resultMap>
+
+    <insert id="offerRedenv" useGeneratedKeys="true" keyProperty="packageId" keyColumn="id">
+        INSERT INTO redenvelop.origin_redenv_record (user_id, sum, divisor, create_time)
+        VALUES (#{userId}, #{sum}, #{divisor}, #{createTime})
+    </insert>
+
+</mapper>
